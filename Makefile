@@ -14,4 +14,4 @@ $(TARGET_NAME): $(OBJS)
 %.o: %.c
 
 clean:
-	rm *.o $(TARGET_NAME)
+	rm src/*.o $(TARGET_NAME)
