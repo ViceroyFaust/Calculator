@@ -112,7 +112,3 @@ void Calculator::sci_not() {
 double Calculator::pi() {
     stack.push_back(3.1415926535);
 }
-
-int main(int argc, char* argv[]) {
-
-}
