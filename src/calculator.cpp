@@ -19,8 +19,14 @@ void Calculator::clear() {
     stack.empty();
 }
 double Calculator::pop() {
-    double toReturn = stack[stack.size() - 1];
-    stack.pop_back();
+    /* Returns 0 in case the stack is empty to prevent any errors
+       trying to access an empty cell. This further helps with
+       swap, roll, and other functions which use pop */
+    double toReturn{0};
+    if (stack.size() > 0) {
+        toReturn = stack[stack.size() - 1];
+        stack.pop_back();
+    }
     return toReturn;
 }
 int Calculator::stack_size() {
