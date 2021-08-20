@@ -2,16 +2,18 @@
 #define CALCULATOR_h
 #include <vector>
 
+using number_t = double;
+
 class Calculator {
-    std::vector<double> stack;
+    std::vector<number_t> stack;
 
 public:
     // Stack functions
-    void push(double number);
+    void push(number_t number);
     void swap();
     void roll();
     void clear();
-    double pop();
+    number_t pop();
     int stack_size();
     // Operation functions
     void add();
@@ -33,7 +35,7 @@ public:
     void e_pow();
     void sci_not();
     // Constants
-    double pi();
+    number_t pi();
 };
 
 #endif
