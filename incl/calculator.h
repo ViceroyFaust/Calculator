@@ -7,7 +7,7 @@ class Calculator {
 
 public:
     // Stack functions
-    void push(double push);
+    void push(double number);
     void swap();
     void roll();
     void clear();

@@ -1,8 +1,7 @@
 CXXFLAGS	:= -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -std=c++20 
 SRC			:= $(wildcard src/*.cpp)
 OBJS 		:= $(patsubst %.cpp,%.o,$(wildcard src/*.cpp))
-INCL_DIR	:= incl/
-CPPFLAGS	:= $(shell pkg-config gtkmm-4.0 --cflags)
+CPPFLAGS	:= $(shell pkg-config gtkmm-4.0 --cflags) -Iincl
 LDFLAGS		:= $(shell pkg-config gtkmm-4.0 --libs)
 
 
