@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/dfowl/Devel/workspaces/CPP/Calculator",
+            "binaryPath": "/home/dfowl/Devel/workspaces/CPP/Calculator/calc",
+            "binaryArgs": []
+        }
+    ]
+}

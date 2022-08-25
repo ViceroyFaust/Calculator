@@ -15,8 +15,8 @@ void Calculator::roll() {
     number_t x{pop()};
     stack.insert(stack.begin(), x);
 }
-void Calculator::clear() {
-    stack.empty();
+bool Calculator::clear() {
+    return stack.empty();
 }
 number_t Calculator::pop() {
     /* Returns 0 in case the stack is empty to prevent any errors
@@ -109,6 +109,6 @@ void Calculator::sci_not() {
     stack.push_back(std::pow(10, x));
 }
     // Constants
-number_t Calculator::pi() {
+void Calculator::pi() {
     stack.push_back(3.1415926535);
 }

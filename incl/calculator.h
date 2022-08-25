@@ -1,5 +1,5 @@
 #ifndef CALCULATOR_H
-#define CALCULATOR_h
+#define CALCULATOR_H
 #include <vector>
 
 using number_t = double;
@@ -12,7 +12,7 @@ public:
     void push(number_t number);
     void swap();
     void roll();
-    void clear();
+    bool clear();
     number_t pop();
     int stack_size();
     // Operation functions
@@ -35,7 +35,7 @@ public:
     void e_pow();
     void sci_not();
     // Constants
-    number_t pi();
+    void pi();
 };
 
 #endif
