@@ -23,7 +23,16 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "Calculator") {
 
     decimal = new wxButton(this, decimalButtonId, ".");
     sign = new wxButton(this, signButtonId, "-/+");
-    //enter = new wxButton(this, enterButtonId, "Enter");
+    enter = new wxButton(this, enterButtonId, "Enter");
+    back = new wxButton(this, backButtonId, "<-");
+    clear = new wxButton(this, clearButtonId, "C");
+    clearAll = new wxButton(this, clearAllButtonId, "AC");
+
+    operationSizer = new wxBoxSizer(wxVERTICAL);
+    operationSizer->Add(back, 1, wxEXPAND);
+    operationSizer->Add(clear, 1, wxEXPAND);
+    operationSizer->Add(clearAll, 1, wxEXPAND);
+    operationSizer->Add(enter, 2, wxEXPAND);
 
     numpadSizer = new wxGridSizer(5, 4, 0, 0);
     numpadSizer->Add(roll, 1, wxEXPAND);
@@ -47,7 +56,11 @@ MainFrame::MainFrame() : wxFrame(nullptr, wxID_ANY, "Calculator") {
     numpadSizer->Add(sign, 1, wxEXPAND);
     numpadSizer->Add(divide, 1, wxEXPAND);
 
-    this->SetSizerAndFit(numpadSizer);
+    parentSizer = new wxBoxSizer(wxHORIZONTAL);
+    parentSizer->Add(numpadSizer, 3, wxEXPAND);
+    parentSizer->Add(operationSizer, 1, wxEXPAND);
+
+    this->SetSizerAndFit(parentSizer);
 
 }
 

@@ -27,7 +27,10 @@ enum ButtonId {
     // Misc Buttons
     decimalButtonId,
     signButtonId,
-    enterButtonId
+    enterButtonId,
+    backButtonId,
+    clearButtonId,
+    clearAllButtonId
 };
 
 class MainFrame : public wxFrame {
@@ -58,11 +61,14 @@ wxButton* pop;
 
 wxButton* decimal;
 wxButton* sign;
-//wxButton* enter;
+wxButton* enter;
+wxButton* back;
+wxButton* clear;
+wxButton* clearAll;
 
-wxBoxSizer* parentSizer;
 wxBoxSizer* operationSizer;
 wxGridSizer* numpadSizer;
+wxBoxSizer* parentSizer;
 
 
 };
