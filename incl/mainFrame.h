@@ -20,6 +20,10 @@ enum ButtonId {
     subtractButtonId,
     multiplyButtonId,
     divideButtonId,
+    modButtonId,
+    rollButtonId,
+    swapButtonId,
+    popButtonId,
     // Misc Buttons
     decimalButtonId,
     signButtonId,
@@ -42,15 +46,23 @@ wxButton* six;
 wxButton* seven;
 wxButton* eight;
 wxButton* nine;
+
 wxButton* add;
 wxButton* subtract;
 wxButton* multiply;
 wxButton* divide;
+wxButton* mod;
+wxButton* roll;
+wxButton* swap;
+wxButton* pop;
+
 wxButton* decimal;
 wxButton* sign;
 //wxButton* enter;
 
-wxGridSizer* gsizer;
+wxBoxSizer* parentSizer;
+wxBoxSizer* operationSizer;
+wxGridSizer* numpadSizer;
 
 
 };
