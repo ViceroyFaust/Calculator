@@ -5,35 +5,53 @@
 
 enum ButtonId {
     // Number Buttons
-    ZeroButtonId = wxID_LAST + 1,
-    OneButtonId,
-    TwoButtonId,
-    ThreeButtonId,
-    FourButtonId,
-    FiveButtonId,
-    SixButtonId,
-    SevenButtonId,
-    EightButtonId,
-    NineButtonId,
+    zeroButtonId = wxID_LAST + 1,
+    oneButtonId,
+    twoButtonId,
+    threeButtonId,
+    fourButtonId,
+    fiveButtonId,
+    sixButtonId,
+    sevenButtonId,
+    eightButtonId,
+    nineButtonId,
     // Operation Buttons
-    AddButtonId,
-    SubtractButtonId,
-    MultiplyButtonId,
-    DivideButtonId,
+    addButtonId,
+    subtractButtonId,
+    multiplyButtonId,
+    divideButtonId,
     // Misc Buttons
     decimalButtonId,
-    signButtonId
+    signButtonId,
+    enterButtonId
 };
 
 class MainFrame : public wxFrame {
 private:
 public:
-
-wxButton* zero, one, two, three, four, five, six, seven, eight, nine,
-    add, subtract, multiply, divide, decimal, sign;
-
 MainFrame();
 ~MainFrame();
+
+wxButton* zero;
+wxButton* one;
+wxButton* two;
+wxButton* three;
+wxButton* four;
+wxButton* five;
+wxButton* six;
+wxButton* seven;
+wxButton* eight;
+wxButton* nine;
+wxButton* add;
+wxButton* subtract;
+wxButton* multiply;
+wxButton* divide;
+wxButton* decimal;
+wxButton* sign;
+//wxButton* enter;
+
+wxGridSizer* gsizer;
+
 
 };
 
